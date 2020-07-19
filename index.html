@@ -16,10 +16,11 @@
         <p><input id="word" type="text" name="search" placeholder="Search..."/> 
         <button id="search">Submit</button></p>
         </div>
-        <div id="output"></div>
+        <div id="output" ></div>
         
         <footer>
           <p>Made with &hearts; by Sam.</p>
+          <p>Also contributed by <a href="https://github.com/piyushxbajaj">Piyush Bajaj</a></p>
         </footer>
       <script>
         document.getElementById('search').addEventListener('click',getresult);
@@ -43,14 +44,16 @@
                     {
                     output+=`
                           <img src="${p.image_thumbnail_path}">
-                          <ul>
+                          <center>
+                          <ul style = "list-style-type:none;">
                           <li>Name: ${p.name}</li>  
                           <li>Start Date : ${p.start_date}</li>
                           <li>End Date: ${p.end_date}</li>
                           <li>Status: ${p.status}</li>
                           <li>Country: ${p.country}</li>
                           <li>Network: ${p.network}</li>
-                          </ul>          
+                          </ul> 
+                          </center>         
                     `
                     flag=1;
                     }
